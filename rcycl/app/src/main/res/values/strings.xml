@@ -1,8 +1,23 @@
 <resources>
     <string name="app_name">rcycl</string>
+    <string name="app_header">Saving the planet, together.</string>
+
+    <string name="request_pickup_prompt">
+        Got a few clean, empty aluminum or plastic bottles?
+        Enter your address below and we\'ll send someone to pick them up.
+    </string>
+
+    <string name="request_pickup_apt_reminder">
+        (Remember to enter your apartment number!)
+    </string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+
+    <string name="menu_request_pickup">Request Pickup</string>
+    <string name="menu_go_pickup">Go Pickup</string>
+    <string name="menu_leaderboard">Leaderboard</string>
+    <string name="menu_my_account">My Account</string>
 </resources>

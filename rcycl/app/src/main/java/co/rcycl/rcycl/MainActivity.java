@@ -98,6 +98,11 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
+    // Takes an APIObject and POSTs it to the server.
+    public void postToAPI(APIObject obj) {
+        Utils.cheers(this, "DEBUG: HTTPAsyncRequest goes here.");
+    }
+
     // Accepts a Fragment and swaps that into the activity_main's content wrapper.
     private void swapFragment(Fragment fragment) {
         FragmentManager fm = getSupportFragmentManager();

@@ -25,4 +25,11 @@
         android:layout_below="@+id/request_pickup_address"
         android:text="@string/request_pickup_apt_reminder"/>
 
+    <Button
+        android:id="@+id/button_request_pickup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/request_pickup_address_reminder"
+        android:text="@string/menu_request_pickup"/>
+
 </RelativeLayout>

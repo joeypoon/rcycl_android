@@ -7,6 +7,16 @@
         Enter your address below and we\'ll send someone to pick them up.
     </string>
 
+    <string name="request_pickup_kudos">
+        Place your recycling box/bin/bag outside and it\'ll be empty by morning. How easy was that?
+    </string>
+
+    <string name="sign_in_prompt">
+        Sign in to track your score. We use that to decide who wins prizes.
+    </string>
+
+    <string name="not_a_user_prompt"> No account? </string>
+
     <string name="request_pickup_apt_reminder">
         (Remember to enter your apartment number!)
     </string>

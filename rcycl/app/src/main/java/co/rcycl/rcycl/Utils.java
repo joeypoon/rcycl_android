@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.lang.reflect.Method;
+
 // Created by Whit on 2/28/2016.
 // A class containing static utility methods to make dev *that much* easier.
 public class Utils {
@@ -25,4 +27,16 @@ public class Utils {
         Log.d(obj.getClass().getName(), msg);
     }
 
+    // Attempts to retrieve the method with name methodName accepting paramTypes from obj.
+    public static Method getDelegate(Object obj, String methodName, Class... paramTypes) {
+        Method delegate = null;
+
+        try {
+            delegate = obj.getClass().getMethod(methodName, paramTypes);
+        } catch (Exception e) {
+            Utils.log(obj, e.getLocalizedMessage());
+        }
+
+        return delegate;
+    }
 }

@@ -8,7 +8,7 @@ import android.widget.Button;
 
 // Created by Whit on 2/28/2016.
 // 
-public class RequestPickupFragment extends BaseFragment {
+public class RequestPickupFragment extends BaseFragment<PickupRequest> {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -20,12 +20,12 @@ public class RequestPickupFragment extends BaseFragment {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        PickupRequest request = new PickupRequest();
-                        request.setAddress(
+                        mAPIModel = new PickupRequest();
+                        mAPIModel.setAddress(
                                 Utils.getTextFromViewField(view, R.id.request_pickup_address));
 
-                        if (mParent != null) {
-                            mParent.postToAPI(request);
+                        if (mParentActivity != null) {
+                            mParentActivity.postToAPI(mAPIModel, getAPICallback());
                         } else {
                             Utils.cheers(view.getContext(), "There was an error on our end. Thanks for being a great person!");
                         }
@@ -34,5 +34,10 @@ public class RequestPickupFragment extends BaseFragment {
         );
 
         return view;
+    }
+
+    @Override
+    public void onAPICallback(APIObject response) {
+        mParentActivity.swapFragment(new SignInFragment());
     }
 }

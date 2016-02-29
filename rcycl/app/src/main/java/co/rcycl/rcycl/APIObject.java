@@ -6,7 +6,8 @@ import org.json.JSONObject;
 // The base behavior for object that are sent to/from the API server.
 public abstract class APIObject {
 
-    protected int mID;
+    // 0 by default as a convention to track "null" ID's.
+    protected int mID = 0;
     public int getID() {return mID;}
 
     protected String mEndpointName;
